@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_shade_1"
+    tools:context=".MainActivity">
+
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+    </ProgressBar>
+
+
+        <TextView
+            android:id="@+id/cityName"
+            style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Enter City Name"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:layout_marginTop="30sp"
+            android:padding="10sp"
+            android:textSize="25sp">
+        </TextView>
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape"
+            android:drawableRight="@drawable/ic_search"
+            android:hint="Enter Your City Name"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="12dp"
+            android:layout_below="@id/cityName"
+            android:singleLine="true"
+            android:textColor="@color/purple_500"
+            android:textColorHint="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+
+    <TextView
+        android:id="@+id/temTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/inputET"
+        android:padding="5dp"
+        android:text="23"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="120sp">
+
+    </TextView>
+
+    <ImageButton
+        android:id="@+id/imgTem"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/ic_launcher">
+
+    </ImageButton>
+
+    <TextView
+            android:id="@+id/conditionTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/temTV"
+            android:text="Condition"
+            android:textColor="@color/white"
+            android:textSize="18sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8sp"
+            android:layout_marginTop="14sp"
+            android:layout_marginEnd="8sp"
+            android:layout_marginBottom="8sp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Hourly Weather Forecast"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/weatherRV"
+
+            android:orientation="horizontal"
+            android:layout_below="@+id/tv"
+            android:visibility="visible"
+            android:layout_marginBottom="20sp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>

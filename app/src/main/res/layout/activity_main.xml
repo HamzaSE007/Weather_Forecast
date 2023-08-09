@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_shade_1"
+    tools:context=".MainActivity">
+
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+    </ProgressBar>
+
+
+    <RelativeLayout
+        android:id="@+id/rlHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/imgBG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@color/black_shade_1"
+            >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/cityName"
+            style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Enter City Name"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:layout_marginTop="30sp"
+            android:padding="10sp"
+            android:textSize="25sp">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llEdit"
+            android:orientation="horizontal"
+            android:layout_below="@id/cityName"
+            android:weightSum="5"
+            >
+
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/inputET"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:drawableRight="@drawable/ic_search"
+                    android:singleLine="true"
+                    android:hint="Enter Your City Name"
+                    android:textColorHint="@color/black"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape"
+                    android:padding="12dp"
+                    android:textColor="@color/purple_500"
+                    android:textSize="20sp"
+                    >
+
+                </com.google.android.material.textfield.TextInputEditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll1"
+           android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_below="@id/llEdit"
+            android:gravity="center"
+            android:padding="5dp"
+           >
+
+
+        <TextView
+            android:id="@+id/temTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="23"
+            android:textColor="@color/white"
+            android:textSize="80sp">
+
+        </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+
+        <ImageView
+            android:id="@+id/imgTem"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginRight="10sp"
+            android:src="@mipmap/ic_launcher">
+
+        </ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/conditionTv"
+                    android:layout_below="@id/ll1"
+                    android:gravity="center_horizontal"
+                    android:text="Condition"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+
+                    >
+
+                </TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/rainHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll1"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="10sp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Today Rain Condition"
+            android:textColor="@color/white"
+            android:textSize="25sp">
+
+        </TextView>
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rainHint"
+            android:layout_marginTop="20sp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+              android:textSize="20sp"
+                android:text="Heavy rain"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/tvRain"
+                android:layout_weight="1.5"
+                >
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/rainIV"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_launcher_foreground">
+
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="30%"
+                android:textSize="25sp"
+                android:textColor="@color/white"
+                android:id="@+id/rainTV"
+                >
+
+            </TextView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:layout_below="@+id/ll2"
+            android:layout_marginStart="8sp"
+            android:layout_marginTop="14sp"
+            android:layout_marginEnd="8sp"
+            android:layout_marginBottom="8sp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:text="Hourly Weather Forecast"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/weatherRV"
+            android:orientation="horizontal"
+           android:layout_below="@+id/tv"
+            android:visibility="visible"
+            android:layout_marginBottom="20sp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+</RelativeLayout>

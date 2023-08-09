@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_margin="4sp"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="10sp"
+    android:background="@android:color/transparent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backgroud"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/timeTV"
+            android:padding="4dp"
+            android:text="Time"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            >
+
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tempTV"
+            android:textSize="20sp"
+            android:padding="4dp"
+            android:text="20"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:layout_below="@id/timeTV"
+            >
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/imgCondition"
+            android:layout_width="64dp"
+            android:layout_height="51dp"
+            android:layout_below="@id/tempTV"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="5sp"
+            android:layout_marginTop="5sp"
+            android:layout_marginEnd="5sp"
+            android:layout_marginBottom="5sp"
+            android:padding="4dp"
+            android:src="@mipmap/ic_launcher">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/windTV"
+            android:layout_below="@id/imgCondition"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:padding="4dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:text="30"
+            android:textSize="18sp"
+            >
+
+        </TextView>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
